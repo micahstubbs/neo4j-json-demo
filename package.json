@@ -1,0 +1,29 @@
+{
+  "name": "neo4j-json-demo",
+  "version": "1.0.0",
+  "description": "load json from the stackoverflow api into a neo4j graph database",
+  "main": "load-json.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micahstubbs/neo4j-json-demo.git"
+  },
+  "keywords": [
+    "graph",
+    "node",
+    "javascript",
+    "cypher",
+    "neo4j"
+  ],
+  "author": "@micahstubbs <micah.stubbs@gmail.com> (https://twitter.com/micahstubbs)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/micahstubbs/neo4j-json-demo/issues"
+  },
+  "homepage": "https://github.com/micahstubbs/neo4j-json-demo#readme",
+  "dependencies": {
+    "request": "^2.81.0"
+  }
+}
