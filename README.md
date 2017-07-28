@@ -22,7 +22,7 @@ npm install
 node load-json.js
 ```
 
-then you can visit [http://127.0.0.1:7474/browser/](http://127.0.0.1:7474/browser/)
+then you can visit [http://localhost:7474/browser/](http://localhost:7474/browser/)
 and run a query like this to see the relationship between users and the answers that they provided:
 `MATCH p=()-[r:PROVIDED]->() RETURN p LIMIT 25`
 
