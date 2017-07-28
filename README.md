@@ -13,7 +13,7 @@ bmVvNGo6bmVvNGo=
 
 ## usage 
 
-start neo4j (I clicked on the Mac community edition app and accepted the defaults)
+start neo4j (I clicked on the Mac [neo4j community edition](https://neo4j.com/download/community-edition/) app and accepted the defaults)
 
 ```
 git clone git@github.com:micahstubbs/neo4j-json-demo.git
