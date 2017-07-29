@@ -6,6 +6,10 @@ function cypher(query, params, cb) {
     {
       uri: neo4jUrl,
       headers: {
+        // change `bmVvNGo6YWRtaW4=` to match
+        // the base64 the hash of your
+        // neo4j username and password string
+        // like this 'username:password'
         Authorization: 'Basic bmVvNGo6YWRtaW4='
       },
       json: { statements: [{ statement: query, parameters: params }] }
