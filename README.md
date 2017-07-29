@@ -19,7 +19,7 @@ start neo4j (I clicked on the Mac [neo4j community edition](https://neo4j.com/do
 git clone git@github.com:micahstubbs/neo4j-json-demo.git
 cd neo4j-json-demo
 npm install
-node load-json.js
+node load-json-api.js
 ```
 
 then you can visit [http://localhost:7474/browser/](http://localhost:7474/browser/)
@@ -29,3 +29,10 @@ and run a query like this to see the relationship between users and the answers 
 ![answers-provided-query.png](http://i.imgur.com/NmNfMDC.png)
 
 note that your graph look different from mine. this is expected, since the request to the stackoverflow API pulls in the 100 most recent questions. 
+
+If you'd like to have a deterministic result, load the questions from the included static json file, [stackoverflow-questions-api-response.json](stackoverflow-questions-api-response.json)
+
+```
+cd neo4j-json-demo
+node load-json-file.js
+```
