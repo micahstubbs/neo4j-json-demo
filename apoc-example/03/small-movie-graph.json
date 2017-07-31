@@ -44,7 +44,7 @@
         }
       }
     ],
-    "relationships": [
+    "links": [
       {
         "id": "83204",
         "type": "ACTED_IN",
