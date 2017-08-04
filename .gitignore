@@ -1,2 +1,4 @@
 node_modules
 answers-provided-query.png
+*.sublime-project
+*.sublime-workspace

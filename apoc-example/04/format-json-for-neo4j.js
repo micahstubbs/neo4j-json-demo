@@ -1,9 +1,10 @@
 const fs = require('fs');
 const jf = require('jsonfile');
 
-const inputData = JSON.parse(
-  fs.readFileSync('readme-blocks-graph.json', 'utf-8')
-);
+// const inputFile = 'readme-blocks-graph.json';
+const inputFile = 'readme-blocks-graph-subset-2-users.json';
+
+const inputData = JSON.parse(fs.readFileSync(inputFile, 'utf-8'));
 
 const outputData = {
   graph: {
@@ -50,7 +51,7 @@ inputData.graph.links.forEach((inputLink, i) => {
   });
 });
 
-const outputFile = 'readme-blocks-graph-for-neo4j.json';
+const outputFile = 'readme-blocks-graph-for-neo4j-2-users.json';
 
 jf.writeFile(outputFile, outputData, { spaces: 2 }, err => {
   console.log(err);

@@ -20,8 +20,9 @@ function cypher(query, params, cb) {
   );
 }
 
-const filePath =
-  '/Users/m/workspace/neo4j-json-demo/apoc-example/03/small-movie-graph.json';
+const fileDirectory = '/Users/m/workspace/neo4j-json-demo/apoc-example/04/';
+const fileName = 'readme-blocks-graph-for-neo4j-2-users.json';
+const filePath = `${fileDirectory}${fileName}`;
 
 const query = `CALL apoc.load.json("file://${filePath}") YIELD value AS row WITH row, row.graph.nodes AS nodes UNWIND nodes AS node CALL apoc.create.node(node.labels, node.properties) YIELD node AS n SET n.id = node.id WITH row UNWIND row.graph.links AS rel MATCH (a) WHERE a.id = rel.source MATCH (b) WHERE b.id = rel.target CALL apoc.create.relationship(a, rel.type, rel.properties, b) YIELD rel AS r RETURN *`;
 cypher(query, {}, (err, result) => {
